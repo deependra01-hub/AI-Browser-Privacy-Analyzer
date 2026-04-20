@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Analyzer Dashboard</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Local Intelligence Engine</p>
+        <h1>AI-Based Browser Privacy Analyzer</h1>
+        <p class="subtitle">
+          Monitor live browser requests, identify tracking behavior, and explain what information appears to be exposed or shared.
+        </p>
+      </div>
+      <div class="hero-status">
+        <span class="status-dot"></span>
+        <span id="last-refresh">Waiting for data...</span>
+      </div>
+    </header>
+
+    <section class="metrics-grid" id="metrics-grid">
+      <article class="metric-card">
+        <span>Total Requests</span>
+        <strong id="metric-requests">0</strong>
+      </article>
+      <article class="metric-card">
+        <span>Visited Websites</span>
+        <strong id="metric-websites">0</strong>
+      </article>
+      <article class="metric-card">
+        <span>High Risk Websites</span>
+        <strong id="metric-high-risk">0</strong>
+      </article>
+      <article class="metric-card">
+        <span>Trackers Detected</span>
+        <strong id="metric-trackers">0</strong>
+      </article>
+    </section>
+
+    <main class="content-grid">
+      <section class="panel full-span">
+        <div class="panel-heading">
+          <h2>Website Risk Scores</h2>
+          <p>Recently observed websites are sorted by the latest request time. Each row shows when activity happened, what risk was identified, and what data types were seen.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Website</th>
+                <th>Last Seen</th>
+                <th>Risk Score</th>
+                <th>Category</th>
+                <th>Risk Types</th>
+                <th>Data Observed</th>
+                <th>Trackers</th>
+              </tr>
+            </thead>
+            <tbody id="website-table">
+              <tr><td colspan="7" class="empty">No website data yet.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>Tracker Behavior</h2>
+          <p>These domains are ranked by recent intensity. The panel highlights repeated activity, cross-site presence, and anomaly strength.</p>
+        </div>
+        <div id="domain-chart" class="chart-list">
+          <div class="empty-card">No domain behavior data yet.</div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>Selected Website</h2>
+          <p>This view explains why a selected site is risky, which tracker domains were involved, and what data categories were observed most recently.</p>
+        </div>
+        <div id="website-detail" class="detail-panel">
+          <div class="empty-card">Select a website row to inspect its latest findings.</div>
+        </div>
+      </section>
+
+      <section class="panel full-span">
+        <div class="panel-heading">
+          <h2>Real-Time Alerts</h2>
+          <p>These are the newest high-signal warnings generated from live traffic. They help you quickly spot active trackers, suspicious sharing, and risky sites.</p>
+        </div>
+        <div class="alert-inline">
+          <strong>Latest alert:</strong>
+          <span id="latest-alert">No alerts yet</span>
+        </div>
+        <div id="alerts-list" class="stack-list">
+          <div class="empty-card">No alerts generated yet.</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/static/app_explained.js"></script>
+</body>
+</html>

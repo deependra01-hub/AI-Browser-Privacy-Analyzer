@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "AI Browser Privacy Analyzer",
+  "version": "1.0.0",
+  "description": "Collects browser request metadata and sends it to a local privacy analysis engine.",
+  "permissions": [
+    "webRequest",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "http://localhost:8000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Privacy Analyzer",
+    "default_popup": "popup.html"
+  }
+}
+

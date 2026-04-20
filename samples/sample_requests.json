@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://www.example.com/assets/main.js",
+    "domain": "www.example.com",
+    "method": "GET",
+    "cookies": "",
+    "timestamp": "2026-04-12T12:00:00Z",
+    "tab_url": "https://www.example.com",
+    "website": "www.example.com",
+    "source": "sample_loader"
+  },
+  {
+    "url": "https://www.google-analytics.com/collect?v=1&user_id=12345",
+    "domain": "www.google-analytics.com",
+    "method": "POST",
+    "cookies": "_ga=GA1.2.123456789.1",
+    "timestamp": "2026-04-12T12:00:10Z",
+    "tab_url": "https://www.example.com",
+    "website": "www.example.com",
+    "source": "sample_loader"
+  },
+  {
+    "url": "https://connect.facebook.net/en_US/fbevents.js",
+    "domain": "connect.facebook.net",
+    "method": "GET",
+    "cookies": "sessionid=abc123",
+    "timestamp": "2026-04-12T12:00:20Z",
+    "tab_url": "https://www.example.com",
+    "website": "www.example.com",
+    "source": "sample_loader"
+  },
+  {
+    "url": "https://ads.tracker-demo.com/pixel?email=test@example.com",
+    "domain": "ads.tracker-demo.com",
+    "method": "GET",
+    "cookies": "",
+    "timestamp": "2026-04-12T12:00:30Z",
+    "tab_url": "https://portal.bank-demo.com/login",
+    "website": "portal.bank-demo.com",
+    "source": "sample_loader"
+  },
+  {
+    "url": "https://metrics.tracker-demo.com/collect?token=abc123",
+    "domain": "metrics.tracker-demo.com",
+    "method": "POST",
+    "cookies": "authToken=secret",
+    "timestamp": "2026-04-12T12:00:40Z",
+    "tab_url": "https://portal.bank-demo.com/account",
+    "website": "portal.bank-demo.com",
+    "source": "sample_loader"
+  },
+  {
+    "url": "https://hotjar.com/c/hotjar-123.js?sv=7",
+    "domain": "hotjar.com",
+    "method": "GET",
+    "cookies": "_hjSessionUser_123=1",
+    "timestamp": "2026-04-12T12:00:50Z",
+    "tab_url": "https://shop-demo.com",
+    "website": "shop-demo.com",
+    "source": "sample_loader"
+  },
+  {
+    "url": "https://cdn.shop-demo.com/images/banner.jpg",
+    "domain": "cdn.shop-demo.com",
+    "method": "GET",
+    "cookies": "",
+    "timestamp": "2026-04-12T12:01:00Z",
+    "tab_url": "https://shop-demo.com",
+    "website": "shop-demo.com",
+    "source": "sample_loader"
+  },
+  {
+    "url": "https://segment.com/analytics.js/v1/project-id/analytics.min.js",
+    "domain": "segment.com",
+    "method": "GET",
+    "cookies": "ajs_user_id=user-1",
+    "timestamp": "2026-04-12T12:01:10Z",
+    "tab_url": "https://learn-demo.org",
+    "website": "learn-demo.org",
+    "source": "sample_loader"
+  }
+]
+

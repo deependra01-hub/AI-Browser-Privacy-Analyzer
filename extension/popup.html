@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Analyzer</title>
+  <style>
+    body {
+      margin: 0;
+      min-width: 320px;
+      font-family: "Segoe UI", sans-serif;
+      background: #f6f1e8;
+      color: #1f2b27;
+    }
+    .wrap {
+      padding: 16px;
+    }
+    h1 {
+      font-size: 18px;
+      margin: 0 0 8px;
+    }
+    p {
+      margin: 0 0 8px;
+      color: #56645c;
+      line-height: 1.5;
+    }
+    .card {
+      padding: 12px;
+      border-radius: 14px;
+      background: #fffaf2;
+      border: 1px solid rgba(31, 43, 39, 0.08);
+      margin-top: 12px;
+    }
+    button {
+      width: 100%;
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 12px;
+      margin-top: 14px;
+      background: #0f766e;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #7b887f;
+    }
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      margin-top: 8px;
+      border-radius: 10px;
+      border: 1px solid rgba(31, 43, 39, 0.15);
+      background: white;
+      color: #1f2b27;
+      box-sizing: border-box;
+    }
+    .button-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .hint {
+      font-size: 12px;
+      color: #7b887f;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Privacy Analyzer</h1>
+    <p>Captures your real browser request metadata and sends it to your local analysis engine.</p>
+
+    <div class="card">
+      <div class="label">Backend URL</div>
+      <input id="backend-url" type="text" value="http://localhost:8000" />
+      <p class="hint">Use the base URL only, for example http://localhost:8000.</p>
+    </div>
+
+    <div class="card">
+      <div class="label">Backend Status</div>
+      <p id="status">Checking...</p>
+    </div>
+
+    <div class="card">
+      <div class="label">Requests Sent</div>
+      <p id="count">0</p>
+    </div>
+
+    <div class="card">
+      <div class="label">Latest Alert</div>
+      <p id="alert">No alerts yet</p>
+    </div>
+
+    <div class="button-row">
+      <button id="save-settings">Save URL</button>
+      <button id="open-dashboard">Open Dashboard</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
